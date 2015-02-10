@@ -1,0 +1,16 @@
+<main-menu></main-menu>
+<div>
+    <!-- <h1>{{title}}</h1> -->
+    <ul>
+    	<li ng-repeat="job in jobs">
+    		<a href="#calendar/{{job.id}}">
+    			<h2>{{job.title}}</h2>
+    			<p>{{job.scheduled.start_formatted.time}} - {{job.scheduled.end_formatted.time}}</p>
+    			<p>{{job.customer.first}} {{job.customer.last}}</p>
+    			<ul>
+    				<li ng-repeat="service in job.sevices">{{service}}</li>
+    			</ul>
+    		</a>
+    	</li>
+    </ul>
+</div>

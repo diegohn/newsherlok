@@ -1,0 +1,33 @@
+<div>
+	<a href="" ng-click="showParent()">back</a>
+	<div>
+		<div><img ng-src="{{details.avatar}}"></div>
+		<div>{{ details.first }} {{ details.last }}</div>
+		
+		<div> {{ details.main_phone }} </div>
+		<div> {{ details.alt_phone }} </div>
+	</div>
+	<div>
+		Hours
+		<div>{{ details.start }}</div>
+		<div>{{ details.end }}</div>
+	</div>
+
+	<div>
+		Email Address
+		<div>{{ details.email }}</div>
+		Assigned Vehicle
+		<div>{{ details.vehicle.plate }}</div>
+	</div>
+
+	<div>
+		Employee Permission
+		<span>{{ details.role }}</span>
+	</div>
+
+	<div>
+		Billed Hours in Pay Period
+		<div>Rate : {{ details.rate | currency:"USD$":2}}</div>
+		<div>Type : {{ details.pay_type}}</div>
+	</div>
+</div>

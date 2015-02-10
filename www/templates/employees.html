@@ -1,0 +1,25 @@
+<div class="{{parent_width}}">
+	<ul>
+		Managers
+		<li ng-repeat="employee in employees | filter : categoryFilterManagers" >
+			<!-- <a href="#employees/{{employee.id}}">  -->
+			<a ui-sref=".detail({empID:employee.id})" ng-click="reduceParent()"> 
+				<img ng-src="{{employee.avatar}}" width="20">
+				<span>{{ employee.display_name }}</span>
+				<span> - {{ employee.job_title}}</span>
+			</a>
+		</li>
+	</ul>
+	<ul>
+		Employees
+		<li ng-repeat="employee in employees | filter: categoryFilterMembers">
+			<a ui-sref=".detail({empID:employee.id})" ng-click="reduceParent()"> 
+				<img ng-src="{{employee.avatar}}" width="20">
+				<span>{{ employee.display_name }}</span>
+				<span> - {{ employee.job_title}}</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div class="{{child_width}}" ui-view></div>

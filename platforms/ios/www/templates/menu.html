@@ -1,0 +1,14 @@
+<ul class="nav nav-pills nav-stacked">
+    <li><a href="#calendar">Calendar</a></li>
+    <li><a href="#employees">Employees</a></li>
+    <li>
+    	<a href="#jobs">Jobs</a>
+		<ul ng-controller="jobController" ng-show="show">
+			<li><a href="" ng-click="selectCategory('potential')">Potential</a></li>
+			<li><a href="" ng-click="selectCategory('active')">Active</a></li>
+			<li><a href="" ng-click="selectCategory('archive')">Archived</a></li>
+		</ul>
+    </li>
+    <li><a href="#vehicles">Vehicles</a></li>
+    <li><a href="#login">Log out</a></li>
+</ul>

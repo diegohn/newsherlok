@@ -1,0 +1,48 @@
+<div>
+	<h2>Customer Info</h2>
+	<div>
+		<div><img ng-src="{{customer.map}}"></div>
+		<div>
+			<span>{{customer.first}} {{customer.last}}</span>
+			<span>{{schedule.start_formatted.month}} {{schedule.end_formatted.day}}</span>
+		</div>
+		<div>
+			<span> {{customer.phone1}} </span><span> {{customer.phone2}} </span>
+		</div>
+	</div>
+
+	<div>
+		Time of Event
+		<div>{{ schedule.start_formatted.time }}</div>
+		<div>{{ schedule.end_formatted.time }}</div>
+	</div>
+
+	<div>
+		Correspondence
+		<div>{{ customer.l_phone }} Last Phone Call</div>
+		<div>{{ customer.l_mail }} Last Email</div>
+	</div>
+
+	<div>
+		Services
+		<ul><li ng-repeat="service in services">{{ service }}</li></ul>
+	</div>
+	
+	<div>
+		Email Address
+		<div>{{ customer.email }}</div>
+	</div>
+	<!-- State, Zip, City pending, ACF question *user(how to store). or *job(how to store)-->
+	<div>
+		Address #1
+		<div>{{ customer.address1 }}</div>
+
+		Address #2
+		<div>{{ customer.address2 }}</div>
+	</div>
+	
+	<div>
+		Vehicle
+		{{ vehicle.plate }}
+	</div>
+</div>
