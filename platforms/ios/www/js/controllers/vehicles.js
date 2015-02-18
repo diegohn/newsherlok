@@ -120,11 +120,9 @@
     //Fail helper
     onFail = function(message) {
       console.log('Failed because: ' + message);
-      alert('failed');
     }
     //Helper function on success for uploadPhoto.
     winning = function(r3) {
-    	alert('winning');
     console.log(r3);
       console.log("Code = " + r3.responseCode);
       console.log("Response = " + r3.response);
@@ -132,7 +130,6 @@
   }
     //Helper function on fail for uploadPhoto.
     failing = function(error2) {
-    	alert('failing');
       console.log(error2);
       // console.log("An error2 has occurred: Code = " + error2.code);
       // console.log("upload error2 source " + error2.source);

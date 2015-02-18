@@ -1,46 +1,108 @@
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/CordovaApp.ap_ \
- : /Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-hdpi/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-land-hdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-land-ldpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-land-mdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-land-xhdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-ldpi/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-mdpi/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-port-hdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-port-ldpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-port-mdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-port-xhdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/drawable-xhdpi/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/values/strings.xml \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/res/xml/config.xml \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-hdpi/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-land-mdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-land-xhdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-ldpi/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-mdpi/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-port-hdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-port-ldpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-port-mdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-port-xhdpi/screen.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/_where-is-www.txt \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/cordova.js \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/cordova_plugins.js \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/css \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/img \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/index.html \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/js \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/templates \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/css/index.css \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/img/logo.png \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/js/angular.min.js \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/js/index.js \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/templates/employees.html \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/templates/jobs.html \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/assets/www/templates/vehicles.html \
-/Users/development2/Desktop/dev sherlok/sherlok/platforms/android/ant-build/AndroidManifest.xml \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/CordovaApp.ap_ \
+ : /Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-hdpi/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-land-hdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-land-ldpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-land-mdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-land-xhdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-ldpi/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-mdpi/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-port-hdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-port-ldpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-port-mdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-port-xhdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/drawable-xhdpi/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/values/strings.xml \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/res/xml/config.xml \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-hdpi/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-land-mdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-land-xhdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-ldpi/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-mdpi/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-port-hdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-port-ldpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-port-mdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-port-xhdpi/screen.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/_where-is-www.txt \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/cordova.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/cordova_plugins.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/css \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/img \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/index.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/css/index.css \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/img/logo.png \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/angular-cookies.min.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/angular-route.min.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/angular-ui-router.min.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/angular.min.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/app.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/controllers \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/index.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/services \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/controllers/calendar.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/controllers/employees.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/controllers/inventory.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/controllers/jobs.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/controllers/login.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/controllers/notes.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/js/controllers/vehicles.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.camera \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.device \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.camera/www \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/Camera.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraConstants.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraPopoverHandle.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraPopoverOptions.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/android \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryReader.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Entry.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/File.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileEntry.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileError.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileReader.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileSystem.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/fileSystemPaths.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/fileSystems-roots.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/fileSystems.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadResult.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileWriter.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Flags.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Metadata.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ProgressEvent.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/requestFileSystem.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file/www/android/FileSystem.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/add-vehicle.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/calendar.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/clients.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/employee-detail.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/employees.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/home-template.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/inventory.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/job-detail.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/jobs.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/login.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/menu.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/notes.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/vehicle-detail.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/assets/www/templates/vehicles.html \
+/Users/development2/Desktop/dev sherlok copy/sherlok/platforms/android/ant-build/AndroidManifest.xml \
