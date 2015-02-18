@@ -10,7 +10,8 @@
          $stateProvider
             .state('home', {
                url: '/',
-               templateUrl: 'templates/home-template.html',
+               template: '<div>This is a test</div>',
+               // templateUrl: 'templates/home-template.html',
                data: {
                   requireLogin: true
                }
