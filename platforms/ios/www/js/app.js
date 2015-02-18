@@ -17,7 +17,8 @@
             })
             .state('login', {
                url: 'login',
-               templateUrl : '/templates/login.html',
+               // templateUrl : '/templates/login.html',
+               template: '<div>This is a test</div>',
                controller  : 'loginController',
                data: {
                   requireLogin: false
