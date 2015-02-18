@@ -10,16 +10,16 @@
          $stateProvider
             .state('home', {
                url: '/',
-               template: '<div>This is a test home</div>',
-               // templateUrl: 'templates/home-template.html',
+               //template: '<div>This is a test home</div>',
+               templateUrl: 'templates/home-template.html',
                data: {
                   requireLogin: true
                }
             })
             .state('login', {
                url: '/login',
-               // templateUrl : '/templates/login.html',
-               template: '<div>This is a test login</div>',
+               templateUrl : 'templates/login.html',
+               //template: '<div>This is a test login</div>',
                controller  : 'loginController',
                data: {
                   requireLogin: false
@@ -27,7 +27,7 @@
             })
             .state('home.calendar', {
                url: '/calendar',
-                templateUrl: '/templates/calendar.html',
+                templateUrl: 'templates/calendar.html',
                 controller  : 'calendarController',
                data: {
                   requireLogin: true
