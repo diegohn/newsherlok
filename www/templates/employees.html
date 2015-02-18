@@ -2,7 +2,6 @@
 	<ul>
 		Managers
 		<li ng-repeat="employee in employees | filter : categoryFilterManagers" >
-			<!-- <a href="#employees/{{employee.id}}">  -->
 			<a ui-sref=".detail({empID:employee.id})" ng-click="reduceParent()"> 
 				<img ng-src="{{employee.avatar}}" width="20">
 				<span>{{ employee.display_name }}</span>

@@ -1,0 +1,32 @@
+<div>
+	<input type="button" ng-click="editButton()" value="Edit"/>
+	<form>
+		<fieldset ng-disabled="edit">
+			<div>
+				<div><img ng-src="{{information.avatar}}"></div>
+				<div>
+					<input type="text" placeholder="Truck" ng-model="information.title" /> 
+				</div>
+				<div>
+					<input type="text" placeholder="License Plate" ng-model="information.plate" > 
+					<select ng-model="information.state" ng-options="state.label for state in options">
+	    			</select>
+				</div>
+				<div>
+					<input type="number" ng-model="information.mileage"/><span>Mileage</span>
+				</div>
+				<div>
+					Service
+					<div><input type="number" ng-model="information.oil_last"/><span>last oil change</span></div>
+					<div><input type="number" ng-model="information.oil_next"/><span>next oil change</span></div>
+					<div><input type="number" ng-model="information.air_last"/><span>last air filter change</span></div>
+					<div><input type="number" ng-model="information.air_next"/><span>next air filter change</span></div>
+				</div>
+				<div>
+					Notes
+					<textarea ng-model="information.notes"></textarea>
+				</div>
+			<input type="submit" ng-click="update(information)" value="Save" />
+		</fieldset>
+	</form>
+</div>

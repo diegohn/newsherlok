@@ -7,7 +7,6 @@
     	var credentials = $cookieStore.get('globals');
     	var cookie = credentials.currentUser.cookie;
     	selectedStatus = null;
-    
     	$http.post('http://sherlok.theideapeople.net/?json=tip.get_jobs_list&cookie='+cookie)
     		.success(function(data,status,headers,config){
     			if(data.response) {

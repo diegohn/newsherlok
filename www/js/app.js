@@ -1,6 +1,6 @@
 (function() {
   //Module
-   var sherlokApp = angular.module('sherlokApp', ['ngRoute','ui.router','ngCookies','sherlok-employees','sherlok-calendar','sherlok-jobs', 'sherlok-vehicles','sherlok-login']);
+   var sherlokApp = angular.module('sherlokApp', ['ngRoute','ui.router','ngCookies','sherlok-employees','sherlok-calendar','sherlok-jobs', 'sherlok-vehicles','sherlok-login','sherlok-inventory','sherlok-notes']);
 
    sherlokApp
       .config(function($stateProvider, $urlRouterProvider) {
@@ -79,10 +79,26 @@
                   requireLogin: true
                }
             })
+            .state('home.vehicles.detail',{
+               url: '/vehicles/:vehId',
+               templateUrl: 'templates/vehicle-detail.html',
+               controller: 'vehicleControllerDetail',
+               data : {
+                  requireLogin: true
+               }
+            })
+            .state('home.add-vehicle',{
+               url: '/add-vehicle',
+               templateUrl: 'templates/add-vehicle.html',
+               controller: 'vehicleAddController',
+               data : {
+                  requireLogin: true
+               }
+            })
             .state('home.inventory', {
                url: '/inventory',
                templateUrl : 'templates/inventory.html',
-               //controller  : 'inventoryController',
+               controller  : 'inventoryController',
                data: {
                   requireLogin: true
                }
@@ -90,7 +106,7 @@
             .state('home.notes', {
                url: '/notes',
                templateUrl : 'templates/notes.html',
-               //controller  : 'noteController',
+               controller  : 'notesController',
                data: {
                   requireLogin: true
                }

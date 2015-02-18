@@ -7,11 +7,8 @@
     	var credentials = $cookieStore.get('globals');
     	var cookie = credentials.currentUser.cookie;
     	selectedStatus = null;
-    	// $scope.title = 'Jobs';
-    
     	$http.post('http://sherlok.theideapeople.net/?json=tip.get_jobs_list&cookie='+cookie)
     		.success(function(data,status,headers,config){
-    			//console.log(data);
     			if(data.response) {
     				$scope.jobs = data.jobs;
     			}
@@ -23,15 +20,9 @@
     		selectedStatus = null;
     	};
     	$scope.selectCategory = function (newStatus) {
-    		//console.log('selectCategory');
-    		//console.log(newStatus);
             selectedStatus = newStatus;
-            //console.log(selectedStatus);
       };
     	$scope.filterJobStatus = function(job){
-    		//console.log('diego');
-    		//console.log(selectedStatus);
-
     		if(!selectedStatus){
     			return " ";
     		} else if(selectedStatus === 'potential') {
@@ -44,15 +35,12 @@
     	};
   	}]);
 
-  	sherlokApp.controller('jobDetailController',['$scope','$routeParams','$cookieStore','$http',function($scope,$routeParams,$cookieStore,$http){
-  		//Get the Job ID.
-  		$scope.phoneId = $routeParams.jobId;
-  		
+  	sherlokApp.controller('jobDetailController',['$scope','$routeParams','$cookieStore','$http','$stateParams',function($scope,$routeParams,$cookieStore,$http,$stateParams){  		
   		//Variables.
   		var credentials = $cookieStore.get('globals');
   		var cookie 	 = credentials.currentUser.cookie;
-  		var jobIdUrl = $routeParams.jobId;
-
+      var jobIdUrl = $stateParams.jobId;
+      console.log(jobIdUrl);
   		//Get job details
     	$http.post('http://sherlok.theideapeople.net/?json=tip.get_job_details&cookie='+cookie+'&job='+jobIdUrl)
     		.success(function(data,status,headers,config){

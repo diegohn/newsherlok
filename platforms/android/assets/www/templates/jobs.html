@@ -1,14 +1,11 @@
 <div>
-    <h1>{{ title }}</h1>
 	<ul>
 		<li ng-repeat="job in jobs | filter : filterJobStatus">
-			<a href="#jobs/{{job.job_id}}">
+			<a ui-sref=".detail({ jobId: job.job_id})">
 				<span>{{ job.date.start_formatted.month }}</span><span>{{ job.date.start_formatted.day }}</span>
 				<span>{{ job.first + ' ' + job.last }}</span>
 			</a>
 		</li>
 	</ul>
-	
-	<!-- Debug -->
-   <!--  <p>{{ jobs | json }}</p> -->
 </div>
+<div ui-view></div>

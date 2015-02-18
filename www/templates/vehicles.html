@@ -1,6 +1,19 @@
-<main-menu></main-menu>
+<a ui-sref="home.add-vehicle">add vehicle</a>
 <div>
-    <h1>Vehicles Page</h1>
-
-    <p>{{ message }}</p>
+	<ul>
+		<li ng-repeat="category in allCategories">
+			{{category}}
+			 <ul>
+		    	<li ng-repeat="vehicle in vehicles | filterCategory: category">
+		    		<a ui-sref="home.vehicles.detail({vehId:vehicle.id})">{{vehicle.title}}</a>
+		    	</li>
+		    </ul>
+		</li>
+	</ul>
+   
 </div>
+<div ui-view></div>
+
+
+<!-- Debug -->
+<!-- <p>{{vehicles | json }}</p> -->
