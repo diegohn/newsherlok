@@ -17,15 +17,15 @@
             })
             .state('login', {
                url: 'login',
-               templateUrl : 'templates/login.html',
+               templateUrl : '/templates/login.html',
                controller  : 'loginController',
                data: {
                   requireLogin: false
                }
             })
             .state('home.calendar', {
-               url: '/calendar',
-                templateUrl: 'templates/calendar.html',
+               url: 'calendar',
+                templateUrl: '/templates/calendar.html',
                 controller  : 'calendarController',
                data: {
                   requireLogin: true
