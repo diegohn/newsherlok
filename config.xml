@@ -4,16 +4,39 @@
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="ideas@theideapeople.com" href="http://www.theideapeople.com">
+        The Idea People
     </author>
-	<preference name="Fullscreen" value="true" />
-    <preference name="Orientation" value="landscape" />
 
-    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
-    <gap:plugin name="org.apache.cordova.file" version="1.3.1" />
-    <gap:plugin name="org.apache.cordova.camera" version="0.3.2" />
-    <gap:plugin name="org.apache.cordova.file-transfer" version="0.4.6" />
+
+	<preference name="target-device" value="universal" />
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="KeyboardShrinksView" value="false" />
+    <preference name="EnableViewportScale" value="false"/>
+    <preference name="fullscreen" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="true"/>
+    <preference name="StatusBarBackgroundColor" value="#e55424"/>
+    <preference name="StatusBarStyle" value="lightcontent" />
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <gap:plugin name="com.simplec.plugins.localnotification" />
+    <gap:plugin name="nl.x-services.plugins.socialsharing" />
+    <gap:plugin name="nl.x-services.plugins.videocaptureplus" />
 
     <content src="index.html" />
     <access origin="*" />
