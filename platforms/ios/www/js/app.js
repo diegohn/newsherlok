@@ -26,7 +26,7 @@
                }
             })
             .state('home.calendar', {
-               url: 'calendar',
+               url: '/calendar',
                 templateUrl: '/templates/calendar.html',
                 controller  : 'calendarController',
                data: {
