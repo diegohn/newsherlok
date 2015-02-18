@@ -8,7 +8,6 @@
         The Idea People
     </author>
 
-
 	<preference name="target-device" value="universal" />
     <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
