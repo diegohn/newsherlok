@@ -5,34 +5,11 @@
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
-    <author email="ideas@theideapeople.com" href="http://www.theideapeople.com">
-        The Idea People
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
     </author>
-    <preference name="target-device" value="universal" />
-    <preference name="orientation" value="portrait" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="KeyboardShrinksView" value="false" />
-    <preference name="EnableViewportScale" value="false" />
-    <preference name="fullscreen" value="true" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#e55424" />
-    <preference name="StatusBarStyle" value="lightcontent" />
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.camera" />
-    <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.file" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="org.apache.cordova.contacts" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.vibration" />
-    <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="com.phonegap.plugin.statusbar" />
-    <gap:plugin name="com.simplec.plugins.localnotification" />
-    <gap:plugin name="nl.x-services.plugins.socialsharing" />
-    <gap:plugin name="nl.x-services.plugins.videocaptureplus" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="landscape" />
     <content src="index.html" />
     <access origin="*" />
 </widget>
