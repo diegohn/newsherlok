@@ -113,9 +113,9 @@
       params.value1 = "test";
       params.value2 = "param";                       
       options.params = params;
-      options.headers = {};//{Connection: "close"};
+      options.headers = { Connection: "close" };
       options.chunkedMode = true;
-      ft.upload(imageData, "http://sherlok.theideapeople.net/sherlok.php", winning, failing, options, true);
+      ft.upload(imageData, encodeURI("http://sherlok.theideapeople.net/sherlok.php"), winning, failing, options, true);
     }
     //Fail helper
     onFail = function(message) {
