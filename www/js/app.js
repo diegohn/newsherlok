@@ -9,7 +9,7 @@
 
          $stateProvider
             .state('home', {
-               url: '/',
+               url: "/",
                //template: '<div>This is a test home</div>',
                templateUrl: 'templates/home-template.html',
                data: {
@@ -17,7 +17,7 @@
                }
             })
             .state('login', {
-               url: '/login',
+               url: "/login",
                templateUrl : 'templates/login.html',
                //template: '<div>This is a test login</div>',
                controller  : 'loginController',
@@ -26,7 +26,7 @@
                }
             })
             .state('home.calendar', {
-               url: '/calendar',
+               url: "/calendar",
                 templateUrl: 'templates/calendar.html',
                 controller  : 'calendarController',
                data: {
