@@ -82,59 +82,59 @@
   sherlokApp.controller('vehicleAddController',['$scope',function($scope){
 
     $scope.takeImage = function() {
-      navigator.camera.getPicture(onSuccess, onFail, { 
-        quality: 40,
-        destinationType: Camera.DestinationType.FILE_URI,
-        sourceType : Camera.PictureSourceType.CAMERA,
-        saveToPhotoAlbum: true,
-        allowEdit : false,
-        encodingType: Camera.EncodingType.JPEG,
-        targetWidth: 250,
-        targetHeight: 250 
-      });
+      // navigator.camera.getPicture(onSuccess, onFail, { 
+      //   quality: 40,
+      //   destinationType: Camera.DestinationType.FILE_URI,
+      //   sourceType : Camera.PictureSourceType.CAMERA,
+      //   saveToPhotoAlbum: true,
+      //   allowEdit : false,
+      //   encodingType: Camera.EncodingType.JPEG,
+      //   targetWidth: 250,
+      //   targetHeight: 250 
+      // });
     };
 
-    onSuccess = function(imageData) {
-      //Prepare File
-      var imageFile = imageData;
-      extractedFilename = imageFile.substr(imageFile.lastIndexOf('/')+1);
-      correctedFilename = extractedFilename.split('?', 1)[0];
+  //   onSuccess = function(imageData) {
+  //     //Prepare File
+  //     var imageFile = imageData;
+  //     extractedFilename = imageFile.substr(imageFile.lastIndexOf('/')+1);
+  //     correctedFilename = extractedFilename.split('?', 1)[0];
 
-      //console.log(correctedFilename);
-      //Create File Transfer Object
-      var ft = new FileTransfer(); 
-      //Options                    
-      var options = new FileUploadOptions();
-      options.fileKey  = "vImage1";                      
-      options.fileName = extractedFilename;
-      options.mimeType = "image/jpeg";
-      //Params
-      var params = new Object();
-      params.value1 = "test";
-      params.value2 = "param";                       
-      options.params = params;
-      options.headers = {};//{Connection: "close"};
-      options.chunkedMode = true;
-      ft.upload(imageData, "http://sherlok.theideapeople.net/sherlok.php", winning, failing, options, true);
-    }
-    //Fail helper
-    onFail = function(message) {
-      console.log('Failed because: ' + message);
-    }
-    //Helper function on success for uploadPhoto.
-    winning = function(r3) {
-    console.log(r3);
-      console.log("Code = " + r3.responseCode);
-      console.log("Response = " + r3.response);
-      console.log("Sent = " + r3.bytesSent);
-  }
-    //Helper function on fail for uploadPhoto.
-    failing = function(error2) {
-      console.log(error2);
-      // console.log("An error2 has occurred: Code = " + error2.code);
-      // console.log("upload error2 source " + error2.source);
-      // console.log("upload error2 target " + error2.target);
-    }
+  //     //console.log(correctedFilename);
+  //     //Create File Transfer Object
+  //     var ft = new FileTransfer(); 
+  //     //Options                    
+  //     var options = new FileUploadOptions();
+  //     options.fileKey  = "vImage1";                      
+  //     options.fileName = extractedFilename;
+  //     options.mimeType = "image/jpeg";
+  //     //Params
+  //     var params = new Object();
+  //     params.value1 = "test";
+  //     params.value2 = "param";                       
+  //     options.params = params;
+  //     options.headers = {};//{Connection: "close"};
+  //     options.chunkedMode = true;
+  //     ft.upload(imageData, "http://sherlok.theideapeople.net/sherlok.php", winning, failing, options, true);
+  //   }
+  //   //Fail helper
+  //   onFail = function(message) {
+  //     console.log('Failed because: ' + message);
+  //   }
+  //   //Helper function on success for uploadPhoto.
+  //   winning = function(r3) {
+  //   console.log(r3);
+  //     console.log("Code = " + r3.responseCode);
+  //     console.log("Response = " + r3.response);
+  //     console.log("Sent = " + r3.bytesSent);
+  // }
+  //   //Helper function on fail for uploadPhoto.
+  //   failing = function(error2) {
+  //     console.log(error2);
+  //     // console.log("An error2 has occurred: Code = " + error2.code);
+  //     // console.log("upload error2 source " + error2.source);
+  //     // console.log("upload error2 target " + error2.target);
+  //  }
   }]);
 
    //Custom Filters
