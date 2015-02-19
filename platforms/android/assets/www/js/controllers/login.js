@@ -14,11 +14,8 @@
             AuthenticationService.Login($scope.username, $scope.password, function(response) {
                 if(response.success) {
                 	//here we pass the cookie
-                    console.log('Inside login');
                 	var my_cookie = response.thecookie;
-                    console.log(my_cookie);
                     AuthenticationService.SetCredentials($scope.username, $scope.password, my_cookie);
-                    //$state.transitionTo("home");
                     $location.path('/');
                 } else {
                     $scope.error = response.message;
@@ -26,8 +23,6 @@
                 }
             });
         };
-        //console.log('test');
-		//console.log($cookieStore.get('globals'));
   	}]);
 
    	sherlokApp.factory('AuthenticationService',
@@ -68,28 +63,19 @@
             });
  
         };
-  
         service.SetCredentials = function (username, password, cookie) {
-            //var authdata = Base64.encode(username + ':' + password);
-  
             $rootScope.globals = {
                 currentUser: {
                     username: username,
-                    //authdata: authdata,
                     cookie  : cookie
                 }
             };
-  
-            //$http.defaults.headers.common['Authorization'] = 'Basic ' + authdata; // jshint ignore:line
             $cookieStore.put('globals', $rootScope.globals);
         };
-  
         service.ClearCredentials = function () {
             $rootScope.globals = {};
             $cookieStore.remove('globals');
-            //$http.defaults.headers.common.Authorization = 'Basic ';
         };
-  
         return service;
     }])
   

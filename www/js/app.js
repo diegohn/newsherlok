@@ -141,6 +141,7 @@
       $scope.activeJob = false;
       $scope.activateJobSub = function(value) {
          $scope.activeJob = value;
+         $scope.statesUs = 'my test on main';
       };
   });
 

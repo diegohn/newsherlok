@@ -1,34 +1,34 @@
 <div>
-	<form>
+	<form name="vehicleform" role="form" novalidate>
 		<fieldset ng-disabled="edit">
 			<div>
 				<!-- <div><img ng-src="{{information.avatar}}"></div> -->
-
-                <button ng-click="takeImage()">Upload Image</button>
+				<button ng-click="takeImage()">Upload Image</button>
+				<div id="image"></div>
            		
 				<div>
-					<input type="text" placeholder="Category" ng-model="information.title" /> 
+					<input type="text" placeholder="Category" ng-model="information.title"  required/> 
 				</div>
 				<div>
-					<input type="text" placeholder="License Plate" ng-model="information.plate" > 
-					<select ng-model="information.state" ng-options="state.label for state in options">
+					<input type="text" placeholder="License Plate" ng-model="information.plate" required> 
+					<select ng-model="information.states" ng-options="state.label for state in allStates" required>
 	    			</select>
 				</div>
 				<div>
-					<input type="number" ng-model="information.mileage"/><span>Mileage</span>
+					<input type="number" ng-model="information.mileage" required/><span>Mileage</span>
 				</div>
 				<div>
 					Service
-					<div><input type="number" ng-model="information.oil_last"/><span>last oil change</span></div>
-					<div><input type="number" ng-model="information.oil_next"/><span>next oil change</span></div>
-					<div><input type="number" ng-model="information.air_last"/><span>last air filter change</span></div>
-					<div><input type="number" ng-model="information.air_next"/><span>next air filter change</span></div>
+					<div><input type="number" ng-model="information.oil_last" required/><span>last oil change</span></div>
+					<div><input type="number" ng-model="information.oil_next" required/><span>next oil change</span></div>
+					<div><input type="number" ng-model="information.air_last" required/><span>last air filter change</span></div>
+					<div><input type="number" ng-model="information.air_next" required/><span>next air filter change</span></div>
 				</div>
 				<div>
 					Notes
-					<textarea ng-model="information.notes"></textarea>
+					<textarea ng-model="information.notes" required></textarea>
 				</div>
-			<input type="submit" ng-click="update(information)" value="Save" />
+			<input class="btn btn-danger" type="submit" ng-click="saveData(information)" value="Save" ng-disabled="vehicleform.$invalid" />
 		</fieldset>
 	</form>
 </div>

@@ -3,7 +3,7 @@
     	<li><a ui-sref=".calendar" ng-click="activateJobSub(false)">Calendar</a></li>
 		<li><a ui-sref=".employees" ng-click="activateJobSub(false)">Employees</a></li>	
 		<li><a ui-sref=".clients" ng-click="activateJobSub(false)">Clients</a></li>
-		<li ng-click="activateJobSub(true)" ng-controller="jobController" ng-click="clearFilter()">
+		<li ng-click="activateJobSub(true)" ng-controller="jobController">
 			<a ui-sref=".jobs">Jobs</a>
 			<ul ng-show="activeJob" class="nav nav-pills nav-stacked" ng-controller="jobController">
 				<li><a href="" ng-click="selectCategory('potential')" style="padding-left:25%;">Potential</a></li>
@@ -11,9 +11,9 @@
 				<li><a href="" ng-click="selectCategory('archive')" style="padding-left:25%;">Archived</a></li>
 			</ul>
 		</li>
-		<li><a ui-sref=".vehicles">Vehicles</a></li>
-		<li><a ui-sref=".inventory">Inventory</a></li>
-		<li><a ui-sref=".notes">Notes</a></li>
+		<li><a ui-sref=".vehicles" ng-click="activateJobSub(false)">Vehicles</a></li>
+		<li><a ui-sref=".inventory" ng-click="activateJobSub(false)">Inventory</a></li>
+		<li><a ui-sref=".notes" ng-click="activateJobSub(false)">Notes</a></li>
   	</ul>
 </div>
 </div>
