@@ -4,8 +4,8 @@
 
    sherlokApp
       .config(function($stateProvider, $urlRouterProvider) {
-         $urlRouterProvider.otherwise('/login');
-         //$urlRouterProvider.otherwise('/');
+         //$urlRouterProvider.otherwise('/login');
+         $urlRouterProvider.otherwise('/');
 
          $stateProvider
             .state('home', {

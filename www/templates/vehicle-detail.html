@@ -5,7 +5,13 @@
 			<div>
 				<div><img ng-src="{{information.avatar}}"></div>
 				<div>
-					<input type="text" placeholder="Truck" ng-model="information.title" /> 
+					<input type="text" placeholder="Truck" ng-model="information.type" /> 
+					<input type="text" placeholder="Name" ng-model="information.name" />
+				</div>
+				<div>
+					driver
+					<select ng-model="information.driver" ng-options="driver.label for driver in assgDriver">
+	    			</select>
 				</div>
 				<div>
 					<input type="text" placeholder="License Plate" ng-model="information.plate" > 
@@ -29,4 +35,6 @@
 			<input type="submit" ng-click="update(information)" value="Save" />
 		</fieldset>
 	</form>
+
+	<!-- <input type="button" ng-click="testMap()" value="MAP" > -->
 </div>

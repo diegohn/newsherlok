@@ -61,6 +61,20 @@
     	$scope.backHistory = function() { 
     		window.history.back();
   		};
+      $scope.mapDirections = function() {
+         var deviceOS  = device.platform
+                var platform  = 'apple';
+                if(deviceOS   == 'Android') {
+                    platform  = 'google';
+                }
+
+
+                var ref = window.open('http://maps.'+platform+'.com'+$scope.customer.navigate, '_system', 'location=yes'); 
+                ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); }); 
+                ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); }); 
+                ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); }); 
+                ref.addEventListener('exit', function(event) { alert(event.type); }); 
+      };
   	}]);
 })();
 
