@@ -38,9 +38,12 @@
   	sherlokApp.controller('jobDetailController',['$scope','$routeParams','$cookieStore','$http','$stateParams',function($scope,$routeParams,$cookieStore,$http,$stateParams){  		
   		//Variables.
   		var credentials = $cookieStore.get('globals');
-  		var cookie 	 = credentials.currentUser.cookie;
-      var jobIdUrl = $stateParams.jobId;
-      console.log(jobIdUrl);
+  		var cookie 	    = credentials.currentUser.cookie;
+      var allservices    = $cookieStore.get('organization_services');
+      var jobIdUrl    = $stateParams.jobId;
+      $scope.edit     = true;
+      
+      //console.log(services);
   		//Get job details
     	$http.post('http://sherlok.theideapeople.net/?json=tip.get_job_details&cookie='+cookie+'&job='+jobIdUrl)
     		.success(function(data,status,headers,config){
@@ -51,30 +54,99 @@
     				$scope.schedule = data.schedule;
     				$scope.services = data.services;
     				$scope.vehicle  = data.vehicle;
+            
+
+            $scope.options = data.customer.state_logic;
+            $scope.options2 = data.logic_vehicle;
+            found  = checkLogic($scope.options,data.customer.state);
+            found2 = checkLogic($scope.options,data.customer.state2);
+            found3 = checkVehicle($scope.options2,data.vehicle.id);
+           // state    : $scope.options[found],
+
+
+
+
+            $scope.information = {
+              first   : data.customer.first,
+              last    : data.customer.last,
+              phone1  : data.customer.phone1,
+              phone2  : data.customer.phone2,
+              date    : new Date(data.schedule.start_timestamp),
+              stime   : new Date(data.schedule.start_timestamp),
+              etime   : new Date(data.schedule.end_timestamp),
+              lemail  : new Date(data.customer.l_mail),
+              lphone  : new Date(data.customer.l_phone),
+              colors  : checkbox(allservices,data.services),
+              email   : data.customer.email,
+              address1: data.customer.address1,
+              city1   : data.customer.city,
+              //state1  : data.customer.state,
+              state1    : $scope.options[found],
+              zip1    : parseInt(data.customer.zip),
+              address2: data.customer.address2,
+              city2   : data.customer.city2,
+              //state2  : data.customer.state2,
+              state2    : $scope.options[found2],
+              zip2    : parseInt(data.customer.zip2),
+              vehicle : $scope.options2[found3]
+            };
+
+
     			}
     		})
     		.error(function(data,status,headers,config){
     			console.log(data);
     		});
-
+      checkVehicle = function(array,id) {
+        test = 0;
+        for(x = 0; x < array.length; x++) {
+            if(array[x]['id'] === parseInt(id)) {
+                    test = x;
+            }
+        }
+        return test;
+      }  
+      checkLogic = function(array,name) {
+         position = 0;
+         for(x = 0; x < array.length; x++) {
+            if(array[x]['option'] === name) {
+               position = x;
+            }
+         }
+         return position;
+      };
+      checkbox = function(stack,needles) {
+        var object = {};
+        for(x = 0; x < stack.length; x++) { 
+          object[stack[x]] = (needles.indexOf(stack[x]) >= 0 ? true : false);
+        }
+        return object;     
+      }; 
     	//Back button function.
-    	$scope.backHistory = function() { 
-    		window.history.back();
+    	$scope.editButton = function() { 
+  		  if($scope.edit == true) {
+          $scope.edit = false;
+        } else {
+          $scope.edit = true;
+        }
   		};
       $scope.mapDirections = function() {
-         var deviceOS  = device.platform
-                var platform  = 'apple';
-                if(deviceOS   == 'Android') {
-                    platform  = 'google';
-                }
+        var deviceOS  = device.platform
+        var platform  = 'apple';
+        if(deviceOS   == 'Android') {
+            platform  = 'google';
+        }
 
 
-                var ref = window.open('http://maps.'+platform+'.com'+$scope.customer.navigate, '_system', 'location=yes'); 
-                ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); }); 
-                ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); }); 
-                ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); }); 
-                ref.addEventListener('exit', function(event) { alert(event.type); }); 
+        var ref = window.open('http://maps.'+platform+'.com'+$scope.customer.navigate, '_system', 'location=yes'); 
+        ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); }); 
+        ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); }); 
+        ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); }); 
+        ref.addEventListener('exit', function(event) { alert(event.type); }); 
       };
+      $scope.update = function(values) {
+        console.log(values);
+      }
   	}]);
 })();
 

@@ -1,48 +1,71 @@
 <div>
-	<h2>Customer Info</h2>
-	<div>
-		<div><img ng-src="{{customer.map}}"></div>
-		<div>
-			<span>{{customer.first}} {{customer.last}}</span>
-			<span>{{schedule.start_formatted.month}} {{schedule.end_formatted.day}}</span>
-		</div>
-		<div>
-			<span> {{customer.phone1}} </span><span> {{customer.phone2}} </span>
-		</div>
-	</div>
+	<input type="button" ng-click="editButton()" value="Edit"/>
+	<form>
+		<fieldset ng-disabled="edit">
+			<!-- Customer Info Section -->
+			<div>
+				<h5>Customer Info</h5>
+				<div>
+					<a href="" ng-click="mapDirections()">
+						<img ng-src="{{customer.map}}">
+					</a>
+				</div>
+				<br />
+				<div>
+					<input type="text" placeholder="First Name" ng-model="information.first" />
+					<input type="text" placeholder="Last Name" ng-model="information.last" />
+					<input type="date" ng-model="information.date">
+				</div>
+				<div>
+					<input type="text" placeholder="Main Phone" ng-model="information.phone1" />
+					<input type="text" placeholder="Alt. Phone" ng-model="information.phone2" />
+				</div>
+			</div>
+			
+			<!-- Job Details Section -->
+			<div>
+				Time of Event
+				<input type="time" ng-model="information.stime">
+				<input type="time" ng-model="information.etime">
+			</div>
 
-	<div>
-		Time of Event
-		<div>{{ schedule.start_formatted.time }}</div>
-		<div>{{ schedule.end_formatted.time }}</div>
-	</div>
+			<div>
+				Correspondence
+				<div>
+					Last Email
+					<input type="datetime-local" ng-model="information.lemaild">
+					
+				</div>
+				<div>{{ customer.l_mail }} Last Email</div>
+			</div>
 
-	<div>
-		Correspondence
-		<div>{{ customer.l_phone }} Last Phone Call</div>
-		<div>{{ customer.l_mail }} Last Email</div>
-	</div>
+			<div>
+				Services
+				<ul><li ng-repeat="service in services">{{ service }}</li></ul>
+			</div>
+			
+			<div>
+				Email Address
+				<input type="email" placeholder="Email" ng-model="information.email">
+			</div>
+			<!-- State, Zip, City pending, ACF question *user(how to store). or *job(how to store)-->
+			<div>
+				Address #1
+				<input type="text" placeholder="Address" ng-model="information.address1" />
+				<input type="text" placeholder="City" ng-model="information.city1" />
+				<input type="number" ng-model="information.zip1" />
+				<input type="text" placeholder="State" ng-model="information.state1" />
+				<div>{{ customer.address1 }}</div>
 
-	<div>
-		Services
-		<ul><li ng-repeat="service in services">{{ service }}</li></ul>
-	</div>
-	
-	<div>
-		Email Address
-		<div>{{ customer.email }}</div>
-	</div>
-	<!-- State, Zip, City pending, ACF question *user(how to store). or *job(how to store)-->
-	<div>
-		Address #1
-		<div>{{ customer.address1 }}</div>
-
-		Address #2
-		<div>{{ customer.address2 }}</div>
-	</div>
-	
-	<div>
-		Vehicle
-		{{ vehicle.plate }}
-	</div>
+				Address #2
+				<div>{{ customer.address2 }}</div>
+			</div>
+			
+			<div>
+				Vehicle
+				{{ vehicle.plate }}
+			</div>
+			<input type="submit" ng-click="update(information)" value="Save" />
+		</fieldset>
+	</form>
 </div>

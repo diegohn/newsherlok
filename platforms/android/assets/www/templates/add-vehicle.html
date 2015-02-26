@@ -7,11 +7,12 @@
 				<div id="image"></div>
            		
 				<div>
-					<input type="text" placeholder="Category" ng-model="information.title"  required/> 
+					<input type="text" placeholder="Category" ng-model="information.category"  required/> 
 				</div>
 				<div>
 					<input type="text" placeholder="License Plate" ng-model="information.plate" required> 
 					<select ng-model="information.states" ng-options="state.label for state in allStates" required>
+						 <option value="">-- chose state --</option>
 	    			</select>
 				</div>
 				<div>
