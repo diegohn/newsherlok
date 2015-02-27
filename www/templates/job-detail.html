@@ -7,13 +7,13 @@
 				<h5>Customer Info</h5>
 				<div>
 					<a href="" ng-click="mapDirections()">
-						<img ng-src="{{customer.map}}">
+						<img ng-src="{{map}}">
 					</a>
 				</div>
 				<br />
 				<div>
-					<input type="text" placeholder="First Name" ng-model="information.first" />
-					<input type="text" placeholder="Last Name" ng-model="information.last" />
+					<input type="text" placeholder="First Name" ng-model="information.first" ng-disabled="true"/>
+					<input type="text" placeholder="Last Name" ng-model="information.last" ng-disabled="true"/>
 					<input type="date" ng-model="information.date">
 				</div>
 				<div>
@@ -71,9 +71,8 @@
 			</div>
 			
 			<div>
-				<select ng-model="information.vehicle" ng-options="vehicle.name for vehicle in options2"></select>
-				Vehicle
-				{{ vehicle.plate }}
+				<span>Vehicle</span><br />
+				<select ng-model="information.vehicle" ng-options="vehicle.name for vehicle in options2"></select><br />
 			</div>
 			<input type="submit" ng-click="update(information)" value="Save" />
 		</fieldset>

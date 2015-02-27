@@ -137,13 +137,32 @@
       });
 
   //Controllers
-  sherlokApp.controller('mainController', function($scope, $state,$location){
+  sherlokApp.controller('mainController',['$scope','$state','$location','$cookieStore','$http',function($scope,$state,$location,$cookieStore,$http){
       $scope.activeJob = false;
+      var credentials = $cookieStore.get('globals');
+      if(credentials) {
+         var cookie = credentials.currentUser.cookie;
+         $http.post('http://sherlok.theideapeople.net/?json=tip.get_org_data&cookie='+cookie)
+            .success(function(data,status,headers,config){
+               if(data.response) {
+                  $cookieStore.put('organization_jobs', data.jobs);
+                  $cookieStore.put('organization_services', data.services);
+               }
+            })
+            .error(function(data,status,headers,config){
+               console.log(data);
+            });
+      } //else {
+      //    console.log('this is main controller');
+      //    console.log(cookie);
+      //    console.log('after cookie');
+      // }
+      
       $scope.activateJobSub = function(value) {
          $scope.activeJob = value;
          $scope.statesUs = 'my test on main';
       };
-  });
+  }]);
 
   //Directives
   // sherlokApp.directive('mainMenu',function(){

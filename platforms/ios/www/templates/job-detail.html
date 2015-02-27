@@ -7,13 +7,13 @@
 				<h5>Customer Info</h5>
 				<div>
 					<a href="" ng-click="mapDirections()">
-						<img ng-src="{{customer.map}}">
+						<img ng-src="{{map}}">
 					</a>
 				</div>
 				<br />
 				<div>
-					<input type="text" placeholder="First Name" ng-model="information.first" />
-					<input type="text" placeholder="Last Name" ng-model="information.last" />
+					<input type="text" placeholder="First Name" ng-model="information.first" ng-disabled="true"/>
+					<input type="text" placeholder="Last Name" ng-model="information.last" ng-disabled="true"/>
 					<input type="date" ng-model="information.date">
 				</div>
 				<div>
@@ -24,46 +24,55 @@
 			
 			<!-- Job Details Section -->
 			<div>
-				Time of Event
+				<span>Time of Event</span><br />
 				<input type="time" ng-model="information.stime">
 				<input type="time" ng-model="information.etime">
 			</div>
 
 			<div>
-				Correspondence
+				<span>Correspondence<span>
 				<div>
-					Last Email
-					<input type="datetime-local" ng-model="information.lemaild">
+					<span>Last Email</span><br />
+					<input type="datetime-local" ng-model="information.lemail" /><br />
+					<span>Last Phone Call</span><br />
+					<input type="datetime-local" ng-model="information.lphone" />
 					
 				</div>
-				<div>{{ customer.l_mail }} Last Email</div>
 			</div>
 
 			<div>
-				Services
-				<ul><li ng-repeat="service in services">{{ service }}</li></ul>
+				<span>Services</span><br />
+				<div>
+					<label style="display: block;" ng-repeat="(color,enabled) in information.colors">
+						<input type="checkbox" ng-model="information.colors[color]"> {{color}} 
+    				</label>
+    			</div>
 			</div>
 			
 			<div>
-				Email Address
+				<span>Email Address<span><br />
 				<input type="email" placeholder="Email" ng-model="information.email">
 			</div>
 			<!-- State, Zip, City pending, ACF question *user(how to store). or *job(how to store)-->
 			<div>
-				Address #1
-				<input type="text" placeholder="Address" ng-model="information.address1" />
-				<input type="text" placeholder="City" ng-model="information.city1" />
-				<input type="number" ng-model="information.zip1" />
-				<input type="text" placeholder="State" ng-model="information.state1" />
-				<div>{{ customer.address1 }}</div>
-
-				Address #2
-				<div>{{ customer.address2 }}</div>
+				<span>Address #1</span><br />
+				<input type="text" placeholder="Address" ng-model="information.address1" /><br />
+				<input type="text" placeholder="City" ng-model="information.city1" /><br />
+				<!-- <input type="text" placeholder="State" ng-model="information.state1" /><br /> -->
+				<select ng-model="information.state1" ng-options="state.label for state in options"></select>
+				<input type="number" ng-model="information.zip1" /><br />
+				
+				<span>Address #2</span><br />
+				<input type="text" placeholder="Address" ng-model="information.address2" /><br />
+				<input type="text" placeholder="City" ng-model="information.city2" /><br />
+				<!-- <input type="text" placeholder="State" ng-model="information.state2" /><br /> -->
+				<select ng-model="information.state2" ng-options="state.label for state in options"></select>
+				<input type="number" ng-model="information.zip2" /><br />
 			</div>
 			
 			<div>
-				Vehicle
-				{{ vehicle.plate }}
+				<span>Vehicle</span><br />
+				<select ng-model="information.vehicle" ng-options="vehicle.name for vehicle in options2"></select><br />
 			</div>
 			<input type="submit" ng-click="update(information)" value="Save" />
 		</fieldset>
