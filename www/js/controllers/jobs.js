@@ -109,7 +109,19 @@
           object[stack[x]] = (needles.indexOf(stack[x]) >= 0 ? true : false);
         }
         return object;     
-      }; 
+      };
+      checkboxValues = function(values) {
+        services = new Array();
+        size = Object.keys(values).length;
+
+        for (var o in values) {
+
+          console.log(values.o);
+        }
+
+
+        return Object.keys(values).length;
+      } 
     	//Back button function.
     	$scope.editButton = function() { 
   		  if($scope.edit == true) {
@@ -134,8 +146,20 @@
       };
       $scope.update = function(values) {
          //This is the latest code 2:55PM 02-27-2015..
-         var updateUrl = 'start,'+values.date+'|st';
+        var updateUrl = 'date,'+values.date+'|start,'+values.stime+'|end,'+values.etime;
         console.log(values);
+        console.log(updateUrl);
+        console.log('here is test');
+        console.log(checkboxValues(values.colors));
+        console.log('test ends here');
+
+        $http.post('http://sherlok.theideapeople.net/?json=tip.update_job_details&cookie='+cookie+'&job='+updateUrl)
+          .success(function(data,status,headers,config){
+            console.log(data);
+          })
+          .error(function(data,status,headers,config){
+            console.log(data);
+          });
       }
   	}]);
 })();

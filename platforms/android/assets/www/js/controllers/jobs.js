@@ -133,7 +133,7 @@
         ref.addEventListener('exit', function(event) { alert(event.type); }); 
       };
       $scope.update = function(values) {
-         //This is the latest code 2:55PM 02-27-2015.
+         //This is the latest code 2:55PM 02-27-2015..
          var updateUrl = 'start,'+values.date+'|st';
         console.log(values);
       }
